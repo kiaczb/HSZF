@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "BI496E_HSZF_2024251.Model/1.0.0": {
+        "runtime": {
+          "BI496E_HSZF_2024251.Model.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BI496E_HSZF_2024251.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
