@@ -13,7 +13,6 @@ namespace BI496E_HSZF_2024251.Persistence.MsSql
     {
         Airline GetAirlineById(int id);
         List<Airline> GetAirlineByName(string name);
-        Airline GetAirlineByNameAndDeparture(string name, string departure);
         List<Airline> GetAllAirlines();
         bool hasSameAirline(Airline airline);
         bool ReadFlightsFromJson(string path);
@@ -21,6 +20,8 @@ namespace BI496E_HSZF_2024251.Persistence.MsSql
         void RemoveAirline(Airline airline);
         void AddAirline(Airline airline);
         void AddDestination(Destination destination);
+        void RemoveDestination(Airline airline, Destination destination);
+        void RemoveDiscount(Airline airline, Destination destination);
         void AddRangeDestination(Airline airline, ICollection<Destination> destinations);
     }
     public class AirlineDataProvider : IAirlineDataProvider
@@ -144,11 +145,6 @@ namespace BI496E_HSZF_2024251.Persistence.MsSql
             return FlightDbContext.Airlines.Where(x => x.name == name).ToList();
 
         }
-        public Airline GetAirlineByNameAndDeparture(string name, string departureName)
-        {
-            return FlightDbContext.Airlines.First(x => x.name == name && x.departure_from == departureName);
-
-        }
         public void AddAirline(Airline airline)
         {
             FlightDbContext.Add(airline);
@@ -170,6 +166,25 @@ namespace BI496E_HSZF_2024251.Persistence.MsSql
                 FlightDbContext.SaveChanges();
             }
             FlightDbContext.SaveChanges();
+        }
+
+        public void RemoveDestination(Airline airline, Destination destination)
+        {
+            var dbAirlines = GetFirstPredAirline(x => x.name == airline.name && x.departure_from == airline.departure_from);
+            dbAirlines.Destinations.Remove(destination);
+            FlightDbContext.SaveChanges();
+        }
+
+        public void RemoveDiscount(Airline airline, Destination destination)
+        {
+            var dbAirlines = GetFirstPredAirline(x => x.name == airline.name && x.departure_from == airline.departure_from);
+            foreach (var item in dbAirlines.Destinations)
+            {
+                if (item.Equals(destination))
+                {
+                    item.discount = null;
+                }
+            }
         }
     }
 }

@@ -11,7 +11,6 @@ namespace BI496E_HSZF_2024251.Application
     public interface IAirlineService
     {
         Airline GetAirlineById(int id);
-        Airline GetAirlineByNameAndDeparture(string name, string departure);
         List<Airline> GetAllAirlines();
         List<string> GetAllDistinctAirlineNames();
         List<Airline> GetAirlineByName(string name);
@@ -20,6 +19,9 @@ namespace BI496E_HSZF_2024251.Application
         void RemoveAirline(Airline airline);
         void AddAirline(Airline airline);
         void AddDestination(Destination destination);
+        void RemoveDestination(Airline airline, Destination destination);
+        void RemoveDiscount(Airline airline, Destination destination);
+
         void AddRangeDestination(Airline airline, ICollection<Destination> destinations);
 
     }
@@ -56,12 +58,6 @@ namespace BI496E_HSZF_2024251.Application
         {
             return airlineDataProvider.GetAirlineByName(name);
         }
-
-        public Airline GetAirlineByNameAndDeparture(string name, string departureName)
-        {
-            return airlineDataProvider.GetAirlineByNameAndDeparture(name, departureName);
-        }
-
         public List<Airline> GetAllAirlines()
         {
             return airlineDataProvider.GetAllAirlines();
@@ -85,6 +81,16 @@ namespace BI496E_HSZF_2024251.Application
         public void RemoveAirline(Airline airline)
         {
             airlineDataProvider.RemoveAirline(airline);
+        }
+
+        public void RemoveDestination(Airline airline, Destination destination)
+        {
+            airlineDataProvider.RemoveDestination(airline, destination);
+        }
+
+        public void RemoveDiscount(Airline airline, Destination destination)
+        {
+            airlineDataProvider.RemoveDiscount(airline, destination);
         }
     }
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BI496E_HSZF_2024251.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+646ff3dab1e46f2e68d263c2ff1171136d8c02f8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cabf78c97cf82b50b668ca631e4d8d91ca257da7")]
 [assembly: System.Reflection.AssemblyProductAttribute("BI496E_HSZF_2024251.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BI496E_HSZF_2024251.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
