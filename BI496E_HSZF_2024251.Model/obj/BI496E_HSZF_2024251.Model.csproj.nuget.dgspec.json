@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\Féléves\\BI496E_HSZF_2024251.Model\\BI496E_HSZF_2024251.Model.csproj": {}
+    "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\HSZF\\BI496E_HSZF_2024251.Model\\BI496E_HSZF_2024251.Model.csproj": {}
   },
   "projects": {
-    "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\Féléves\\BI496E_HSZF_2024251.Model\\BI496E_HSZF_2024251.Model.csproj": {
+    "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\HSZF\\BI496E_HSZF_2024251.Model\\BI496E_HSZF_2024251.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\Féléves\\BI496E_HSZF_2024251.Model\\BI496E_HSZF_2024251.Model.csproj",
+        "projectUniqueName": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\HSZF\\BI496E_HSZF_2024251.Model\\BI496E_HSZF_2024251.Model.csproj",
         "projectName": "BI496E_HSZF_2024251.Model",
-        "projectPath": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\Féléves\\BI496E_HSZF_2024251.Model\\BI496E_HSZF_2024251.Model.csproj",
+        "projectPath": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\HSZF\\BI496E_HSZF_2024251.Model\\BI496E_HSZF_2024251.Model.csproj",
         "packagesPath": "C:\\Users\\Bence\\.nuget\\packages\\",
-        "outputPath": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\Féléves\\BI496E_HSZF_2024251.Model\\obj\\",
+        "outputPath": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\HSZF\\BI496E_HSZF_2024251.Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Visual Studio Shared\\NuGetPackages"

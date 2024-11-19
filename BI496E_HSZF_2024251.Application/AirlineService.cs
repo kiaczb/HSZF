@@ -11,11 +11,17 @@ namespace BI496E_HSZF_2024251.Application
     public interface IAirlineService
     {
         Airline GetAirlineById(int id);
+        Airline GetAirlineByNameAndDeparture(string name, string departure);
         List<Airline> GetAllAirlines();
         List<string> GetAllDistinctAirlineNames();
         List<Airline> GetAirlineByName(string name);
         bool ReadFlightsFromJson(string path);
+        bool hasSameAirline(Airline airline);
         void RemoveAirline(Airline airline);
+        void AddAirline(Airline airline);
+        void AddDestination(Destination destination);
+        void AddRangeDestination(Airline airline, ICollection<Destination> destinations);
+
     }
     public class AirlineService : IAirlineService
     {
@@ -25,6 +31,22 @@ namespace BI496E_HSZF_2024251.Application
         {
             this.airlineDataProvider = airlineDataProvider;
         }
+
+        public void AddAirline(Airline airline)
+        {
+            airlineDataProvider.AddAirline(airline);
+        }
+
+        public void AddDestination(Destination destination)
+        {
+            airlineDataProvider.AddDestination(destination);
+        }
+
+        public void AddRangeDestination(Airline airline, ICollection<Destination> destinations)
+        {
+            airlineDataProvider.AddRangeDestination(airline, destinations);
+        }
+
         public Airline GetAirlineById(int id)
         {
             return airlineDataProvider.GetAirlineById(id);
@@ -35,6 +57,11 @@ namespace BI496E_HSZF_2024251.Application
             return airlineDataProvider.GetAirlineByName(name);
         }
 
+        public Airline GetAirlineByNameAndDeparture(string name, string departureName)
+        {
+            return airlineDataProvider.GetAirlineByNameAndDeparture(name, departureName);
+        }
+
         public List<Airline> GetAllAirlines()
         {
             return airlineDataProvider.GetAllAirlines();
@@ -43,6 +70,11 @@ namespace BI496E_HSZF_2024251.Application
         public List<string> GetAllDistinctAirlineNames()
         {
             return airlineDataProvider.GetAllDistinctAirlineNames();
+        }
+
+        public bool hasSameAirline(Airline airline)
+        {
+            return airlineDataProvider.hasSameAirline(airline);
         }
 
         public bool ReadFlightsFromJson(string path)

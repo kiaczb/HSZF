@@ -13,6 +13,7 @@ using System.Reflection;
 using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
+using System.Diagnostics;
 
 var host = Host.CreateDefaultBuilder()
     .ConfigureServices((hostContext, services) =>
@@ -34,12 +35,16 @@ var modifyFlightsMenu = new ConsoleMenu(args, 1)
     .Add("Remove airline", () => ShowAirlines(RemoveAirline))
     .Add("Modify airline", (airline) => ShowAirlines(ModifyAirline))
     .Add("Back", ConsoleMenu.Close);
-
+var modifyAirlineMenu = new ConsoleMenu(args, 2)
+    .Add("Modify", EmptyAction)
+    .Add("Add Destination", EmptyAction)
+    .Add("Remove Destination or Discount", EmptyAction)
+    .Add("Back",ConsoleMenu.Close);
 
 var menu = new ConsoleMenu(args, 0)
-    .Add("Read flights", () => ReadFlights())
+    .Add("Read airline", () => ReadFlights())
         .Add("Modify flights", modifyFlightsMenu.Show)
-        .Add("Four", () => Environment.Exit(0));
+        .Add("Exit", () => Environment.Exit(0));
 
 
 
@@ -142,7 +147,7 @@ static bool TryParseValue(Type targetType, string input, out object result)
 
     if (input == null || input =="")
     {
-        return false;
+        throw new ArgumentNullException(nameof(input));
     }
 
     if (targetType == typeof(string))
@@ -235,15 +240,90 @@ void AddAirline()
     Airline airline = new Airline();
     foreach (PropertyInfo prop in airline.GetType().GetProperties())
     {
+        
         var displayName = (DisplayNameAttribute)Attribute.GetCustomAttribute(prop, typeof(DisplayNameAttribute));
-        Console.WriteLine($"Enter {displayName.DisplayName}:");
-        if (Attribute.IsDefined(prop, typeof(DisplayPropertyAttribute)) && TryParseValue(prop.PropertyType, Console.ReadLine(), out var result) && prop.Name != "discount")
+        if (displayName!= null)
         {
-            prop?.SetValue(prop, result);
+            Console.WriteLine($"Enter {displayName.DisplayName}:");
+            if (displayName.DisplayName == "Destinations")
+            {
+                AddDestinationForm(ref airline);
+
+            }
+        }
+        
+        if (prop.Name != "Destinations" && Attribute.IsDefined(prop, typeof(DisplayPropertyAttribute)) && TryParseValue(prop.PropertyType, Console.ReadLine(), out var result))
+        {
+
+            prop?.SetValue(airline, result);
         }
     }
+    if (!airlineService.hasSameAirline(airline))
+    {
+        airlineService.AddAirline(airline);
+    }
+    else
+    {
+        airlineService.AddRangeDestination(airline, airline.Destinations);
+    }
 }
+void AddDestinationForm(ref Airline airline)
+{
+        ConsoleKeyInfo keyInfo;
+    do
+    {
+        Console.WriteLine();
+        Destination destination = new Destination();
+        foreach (var dest in destination.GetType().GetProperties())
+        {
+            var displayDestName = (DisplayNameAttribute)Attribute.GetCustomAttribute(dest, typeof(DisplayNameAttribute));
+            if (displayDestName != null)
+            {
+                Console.Write($"{displayDestName.DisplayName}: ");
 
+            }
+            if (displayDestName != null && displayDestName.DisplayName == "Discount")
+            {
+                do
+                {
+                    Console.WriteLine("Would you like to add discount? [y/n]");
+                    keyInfo = Console.ReadKey();
+                } while (keyInfo.Key != ConsoleKey.N && keyInfo.Key != ConsoleKey.Y);
+                if (keyInfo.Key == ConsoleKey.Y)
+                {
+                    Discount discount = new Discount();
+                    Console.WriteLine();
+                    foreach (var disc in discount.GetType().GetProperties())
+                    {
+                        var displayDiscName = (DisplayNameAttribute)Attribute.GetCustomAttribute(disc, typeof(DisplayNameAttribute));
+                        if (displayDiscName != null)
+                        {
+                            Console.Write($"{displayDiscName.DisplayName}: ");
+                            if (Attribute.IsDefined(disc, typeof(DisplayPropertyAttribute)) && TryParseValue(disc.PropertyType, Console.ReadLine(), out var discResult))
+                            {
+
+                                disc?.SetValue(discount, discResult);
+                            }
+                        }
+                    }
+                    destination.discount = discount;
+                }
+
+            }
+            if (dest.Name != "discount" && Attribute.IsDefined(dest, typeof(DisplayPropertyAttribute)) && TryParseValue(dest.PropertyType, Console.ReadLine(), out var destResult))
+            {
+
+                dest?.SetValue(destination, destResult);
+            }
+        }
+        airline.Destinations.Add(destination);
+        do
+        {
+            Console.WriteLine("\nWould you like to add more destinations? [y/n]");
+            keyInfo = Console.ReadKey();
+        } while (keyInfo.Key != ConsoleKey.N && keyInfo.Key != ConsoleKey.Y);
+    } while (keyInfo.Key == ConsoleKey.Y);
+}
 void ReadFlights()
 {
     //airlineService.ReadFlightsFromJson("airlines.json");

@@ -13,10 +13,15 @@ namespace BI496E_HSZF_2024251.Persistence.MsSql
     {
         Airline GetAirlineById(int id);
         List<Airline> GetAirlineByName(string name);
+        Airline GetAirlineByNameAndDeparture(string name, string departure);
         List<Airline> GetAllAirlines();
+        bool hasSameAirline(Airline airline);
         bool ReadFlightsFromJson(string path);
         List<string> GetAllDistinctAirlineNames();
         void RemoveAirline(Airline airline);
+        void AddAirline(Airline airline);
+        void AddDestination(Destination destination);
+        void AddRangeDestination(Airline airline, ICollection<Destination> destinations);
     }
     public class AirlineDataProvider : IAirlineDataProvider
     {
@@ -45,7 +50,7 @@ namespace BI496E_HSZF_2024251.Persistence.MsSql
             return FlightDbContext.Airlines.Select(x => x.name).Distinct().ToList();
 
         }
-        private bool IsSameAirline(Airline airline)
+        public bool hasSameAirline(Airline airline)
         {
             foreach (var item in GetAllAirlines())
             {
@@ -67,7 +72,7 @@ namespace BI496E_HSZF_2024251.Persistence.MsSql
             var data = JsonConvert.DeserializeObject<Flights>(json);
             foreach (var airlineData in data.Airlines)
             {
-                if (IsSameAirline(airlineData))
+                if (hasSameAirline(airlineData))
                 {
                     foreach (var destinationData in airlineData.Destinations)
                     {
@@ -80,7 +85,7 @@ namespace BI496E_HSZF_2024251.Persistence.MsSql
                             departure_date = DateTime.Parse(destinationData.departure_date.ToString()),
                             discount = destinationData.discount
                         };
-                        var myAirline = GetFirstPredAirline(x => IsSameAirline(x));
+                        var myAirline = GetFirstPredAirline(x => hasSameAirline(x));
 
                         if (hasDest(destination))
                         {
@@ -138,6 +143,33 @@ namespace BI496E_HSZF_2024251.Persistence.MsSql
         {
             return FlightDbContext.Airlines.Where(x => x.name == name).ToList();
 
+        }
+        public Airline GetAirlineByNameAndDeparture(string name, string departureName)
+        {
+            return FlightDbContext.Airlines.First(x => x.name == name && x.departure_from == departureName);
+
+        }
+        public void AddAirline(Airline airline)
+        {
+            FlightDbContext.Add(airline);
+            FlightDbContext.SaveChanges();
+        }
+
+        public void AddDestination(Destination destination)
+        {
+            FlightDbContext.Destinations.Add(destination);
+            FlightDbContext.SaveChanges();
+        }
+
+        public void AddRangeDestination(Airline airline, ICollection<Destination> destinations)
+        {
+            var dbAirlines = GetFirstPredAirline(x => x.name == airline.name && x.departure_from == airline.departure_from);
+            foreach (var item in destinations)
+            {
+                dbAirlines.Destinations.Add(item);
+                FlightDbContext.SaveChanges();
+            }
+            FlightDbContext.SaveChanges();
         }
     }
 }

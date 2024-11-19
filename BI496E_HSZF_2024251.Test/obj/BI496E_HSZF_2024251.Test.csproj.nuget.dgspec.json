@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\Féléves\\BI496E_HSZF_2024251.Test\\BI496E_HSZF_2024251.Test.csproj": {}
+    "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\HSZF\\BI496E_HSZF_2024251.Test\\BI496E_HSZF_2024251.Test.csproj": {}
   },
   "projects": {
-    "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\Féléves\\BI496E_HSZF_2024251.Application\\BI496E_HSZF_2024251.Application.csproj": {
+    "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\HSZF\\BI496E_HSZF_2024251.Application\\BI496E_HSZF_2024251.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\Féléves\\BI496E_HSZF_2024251.Application\\BI496E_HSZF_2024251.Application.csproj",
+        "projectUniqueName": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\HSZF\\BI496E_HSZF_2024251.Application\\BI496E_HSZF_2024251.Application.csproj",
         "projectName": "BI496E_HSZF_2024251.Application",
-        "projectPath": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\Féléves\\BI496E_HSZF_2024251.Application\\BI496E_HSZF_2024251.Application.csproj",
+        "projectPath": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\HSZF\\BI496E_HSZF_2024251.Application\\BI496E_HSZF_2024251.Application.csproj",
         "packagesPath": "C:\\Users\\Bence\\.nuget\\packages\\",
-        "outputPath": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\Féléves\\BI496E_HSZF_2024251.Application\\obj\\",
+        "outputPath": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\HSZF\\BI496E_HSZF_2024251.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Visual Studio Shared\\NuGetPackages"
@@ -33,11 +33,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\Féléves\\BI496E_HSZF_2024251.Model\\BI496E_HSZF_2024251.Model.csproj": {
-                "projectPath": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\Féléves\\BI496E_HSZF_2024251.Model\\BI496E_HSZF_2024251.Model.csproj"
+              "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\HSZF\\BI496E_HSZF_2024251.Model\\BI496E_HSZF_2024251.Model.csproj": {
+                "projectPath": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\HSZF\\BI496E_HSZF_2024251.Model\\BI496E_HSZF_2024251.Model.csproj"
               },
-              "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\Féléves\\BI496E_HSZF_2024251.Persistence.MsSql\\BI496E_HSZF_2024251.Persistence.MsSql.csproj": {
-                "projectPath": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\Féléves\\BI496E_HSZF_2024251.Persistence.MsSql\\BI496E_HSZF_2024251.Persistence.MsSql.csproj"
+              "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\HSZF\\BI496E_HSZF_2024251.Persistence.MsSql\\BI496E_HSZF_2024251.Persistence.MsSql.csproj": {
+                "projectPath": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\HSZF\\BI496E_HSZF_2024251.Persistence.MsSql\\BI496E_HSZF_2024251.Persistence.MsSql.csproj"
               }
             }
           }
@@ -76,14 +76,14 @@
         }
       }
     },
-    "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\Féléves\\BI496E_HSZF_2024251.Model\\BI496E_HSZF_2024251.Model.csproj": {
+    "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\HSZF\\BI496E_HSZF_2024251.Model\\BI496E_HSZF_2024251.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\Féléves\\BI496E_HSZF_2024251.Model\\BI496E_HSZF_2024251.Model.csproj",
+        "projectUniqueName": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\HSZF\\BI496E_HSZF_2024251.Model\\BI496E_HSZF_2024251.Model.csproj",
         "projectName": "BI496E_HSZF_2024251.Model",
-        "projectPath": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\Féléves\\BI496E_HSZF_2024251.Model\\BI496E_HSZF_2024251.Model.csproj",
+        "projectPath": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\HSZF\\BI496E_HSZF_2024251.Model\\BI496E_HSZF_2024251.Model.csproj",
         "packagesPath": "C:\\Users\\Bence\\.nuget\\packages\\",
-        "outputPath": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\Féléves\\BI496E_HSZF_2024251.Model\\obj\\",
+        "outputPath": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\HSZF\\BI496E_HSZF_2024251.Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Visual Studio Shared\\NuGetPackages"
@@ -141,14 +141,14 @@
         }
       }
     },
-    "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\Féléves\\BI496E_HSZF_2024251.Persistence.MsSql\\BI496E_HSZF_2024251.Persistence.MsSql.csproj": {
+    "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\HSZF\\BI496E_HSZF_2024251.Persistence.MsSql\\BI496E_HSZF_2024251.Persistence.MsSql.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\Féléves\\BI496E_HSZF_2024251.Persistence.MsSql\\BI496E_HSZF_2024251.Persistence.MsSql.csproj",
+        "projectUniqueName": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\HSZF\\BI496E_HSZF_2024251.Persistence.MsSql\\BI496E_HSZF_2024251.Persistence.MsSql.csproj",
         "projectName": "BI496E_HSZF_2024251.Persistence.MsSql",
-        "projectPath": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\Féléves\\BI496E_HSZF_2024251.Persistence.MsSql\\BI496E_HSZF_2024251.Persistence.MsSql.csproj",
+        "projectPath": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\HSZF\\BI496E_HSZF_2024251.Persistence.MsSql\\BI496E_HSZF_2024251.Persistence.MsSql.csproj",
         "packagesPath": "C:\\Users\\Bence\\.nuget\\packages\\",
-        "outputPath": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\Féléves\\BI496E_HSZF_2024251.Persistence.MsSql\\obj\\",
+        "outputPath": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\HSZF\\BI496E_HSZF_2024251.Persistence.MsSql\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Visual Studio Shared\\NuGetPackages"
@@ -170,8 +170,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\Féléves\\BI496E_HSZF_2024251.Model\\BI496E_HSZF_2024251.Model.csproj": {
-                "projectPath": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\Féléves\\BI496E_HSZF_2024251.Model\\BI496E_HSZF_2024251.Model.csproj"
+              "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\HSZF\\BI496E_HSZF_2024251.Model\\BI496E_HSZF_2024251.Model.csproj": {
+                "projectPath": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\HSZF\\BI496E_HSZF_2024251.Model\\BI496E_HSZF_2024251.Model.csproj"
               }
             }
           }
@@ -232,14 +232,14 @@
         }
       }
     },
-    "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\Féléves\\BI496E_HSZF_2024251.Test\\BI496E_HSZF_2024251.Test.csproj": {
+    "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\HSZF\\BI496E_HSZF_2024251.Test\\BI496E_HSZF_2024251.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\Féléves\\BI496E_HSZF_2024251.Test\\BI496E_HSZF_2024251.Test.csproj",
+        "projectUniqueName": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\HSZF\\BI496E_HSZF_2024251.Test\\BI496E_HSZF_2024251.Test.csproj",
         "projectName": "BI496E_HSZF_2024251.Test",
-        "projectPath": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\Féléves\\BI496E_HSZF_2024251.Test\\BI496E_HSZF_2024251.Test.csproj",
+        "projectPath": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\HSZF\\BI496E_HSZF_2024251.Test\\BI496E_HSZF_2024251.Test.csproj",
         "packagesPath": "C:\\Users\\Bence\\.nuget\\packages\\",
-        "outputPath": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\Féléves\\BI496E_HSZF_2024251.Test\\obj\\",
+        "outputPath": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\HSZF\\BI496E_HSZF_2024251.Test\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Visual Studio Shared\\NuGetPackages"
@@ -261,14 +261,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\Féléves\\BI496E_HSZF_2024251.Application\\BI496E_HSZF_2024251.Application.csproj": {
-                "projectPath": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\Féléves\\BI496E_HSZF_2024251.Application\\BI496E_HSZF_2024251.Application.csproj"
+              "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\HSZF\\BI496E_HSZF_2024251.Application\\BI496E_HSZF_2024251.Application.csproj": {
+                "projectPath": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\HSZF\\BI496E_HSZF_2024251.Application\\BI496E_HSZF_2024251.Application.csproj"
               },
-              "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\Féléves\\BI496E_HSZF_2024251.Model\\BI496E_HSZF_2024251.Model.csproj": {
-                "projectPath": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\Féléves\\BI496E_HSZF_2024251.Model\\BI496E_HSZF_2024251.Model.csproj"
+              "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\HSZF\\BI496E_HSZF_2024251.Model\\BI496E_HSZF_2024251.Model.csproj": {
+                "projectPath": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\HSZF\\BI496E_HSZF_2024251.Model\\BI496E_HSZF_2024251.Model.csproj"
               },
-              "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\Féléves\\BI496E_HSZF_2024251.Persistence.MsSql\\BI496E_HSZF_2024251.Persistence.MsSql.csproj": {
-                "projectPath": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\Féléves\\BI496E_HSZF_2024251.Persistence.MsSql\\BI496E_HSZF_2024251.Persistence.MsSql.csproj"
+              "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\HSZF\\BI496E_HSZF_2024251.Persistence.MsSql\\BI496E_HSZF_2024251.Persistence.MsSql.csproj": {
+                "projectPath": "D:\\Egyetem\\3. félév\\Szoftverfejlesztés\\HSZF\\BI496E_HSZF_2024251.Persistence.MsSql\\BI496E_HSZF_2024251.Persistence.MsSql.csproj"
               }
             }
           }
