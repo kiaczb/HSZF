@@ -3,27 +3,39 @@
   "WorkspaceRootPath": "D:\\Egyetem\\3. f\u00E9l\u00E9v\\Szoftverfejleszt\u00E9s\\HSZF\\BI496E_HSZF_2024251.Console\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B8A983B3-179B-4D00-850A-7D5F76840D88}|BI496E_HSZF_2024251.Console.csproj|d:\\egyetem\\3. f\u00E9l\u00E9v\\szoftverfejleszt\u00E9s\\hszf\\bi496e_hszf_2024251.console\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8A983B3-179B-4D00-850A-7D5F76840D88}|BI496E_HSZF_2024251.Console.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{263B3B6A-B705-443D-99CF-0512685EEDDF}|..\\BI496E_HSZF_2024251.Persistence.MsSql\\BI496E_HSZF_2024251.Persistence.MsSql.csproj|d:\\egyetem\\3. f\u00E9l\u00E9v\\szoftverfejleszt\u00E9s\\hszf\\bi496e_hszf_2024251.persistence.mssql\\airlinedataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{263B3B6A-B705-443D-99CF-0512685EEDDF}|..\\BI496E_HSZF_2024251.Persistence.MsSql\\BI496E_HSZF_2024251.Persistence.MsSql.csproj|d:\\egyetem\\3. f\u00E9l\u00E9v\\szoftverfejleszt\u00E9s\\hszf\\bi496e_hszf_2024251.persistence.mssql\\flightdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/FlightsDB/True/SqlTable/dbo.Discount.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA85E587-2E8B-47B7-90E7-89F313D81F1B}|..\\BI496E_HSZF_2024251.Model\\BI496E_HSZF_2024251.Model.csproj|d:\\egyetem\\3. f\u00E9l\u00E9v\\szoftverfejleszt\u00E9s\\hszf\\bi496e_hszf_2024251.model\\discount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{56DF7E04-29FF-45F6-9021-326EEF30FC3A}|..\\BI496E_HSZF_2024251.Application\\BI496E_HSZF_2024251.Application.csproj|d:\\egyetem\\3. f\u00E9l\u00E9v\\szoftverfejleszt\u00E9s\\hszf\\bi496e_hszf_2024251.application\\airlineservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{263B3B6A-B705-443D-99CF-0512685EEDDF}|..\\BI496E_HSZF_2024251.Persistence.MsSql\\BI496E_HSZF_2024251.Persistence.MsSql.csproj|d:\\egyetem\\3. f\u00E9l\u00E9v\\szoftverfejleszt\u00E9s\\hszf\\bi496e_hszf_2024251.persistence.mssql\\airlinedataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/FlightsDB/True/SqlTable/dbo.Destinations.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8A983B3-179B-4D00-850A-7D5F76840D88}|BI496E_HSZF_2024251.Console.csproj|d:\\egyetem\\3. f\u00E9l\u00E9v\\szoftverfejleszt\u00E9s\\hszf\\bi496e_hszf_2024251.console\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8A983B3-179B-4D00-850A-7D5F76840D88}|BI496E_HSZF_2024251.Console.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Egyetem\\3. f\u00E9l\u00E9v\\Szoftverfejleszt\u00E9s\\F\u00E9l\u00E9ves\\BI496E_HSZF_2024251.Model\\Airline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/FlightsDB/True/SqlTable/dbo.Airlines.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Egyetem\\3. f\u00E9l\u00E9v\\Szoftverfejleszt\u00E9s\\HSZF\\BI496E_HSZF_2024251.Console\\bin\\Debug\\net8.0\\airlines.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:bin\\Debug\\net8.0\\airlines.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{263B3B6A-B705-443D-99CF-0512685EEDDF}|..\\BI496E_HSZF_2024251.Persistence.MsSql\\BI496E_HSZF_2024251.Persistence.MsSql.csproj|d:\\egyetem\\3. f\u00E9l\u00E9v\\szoftverfejleszt\u00E9s\\hszf\\bi496e_hszf_2024251.persistence.mssql\\flightdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FA85E587-2E8B-47B7-90E7-89F313D81F1B}|..\\BI496E_HSZF_2024251.Model\\BI496E_HSZF_2024251.Model.csproj|d:\\egyetem\\3. f\u00E9l\u00E9v\\szoftverfejleszt\u00E9s\\hszf\\bi496e_hszf_2024251.model\\airline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Egyetem\\3. f\u00E9l\u00E9v\\Szoftverfejleszt\u00E9s\\F\u00E9l\u00E9ves\\BI496E_HSZF_2024251.Model\\Airline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Egyetem\\3. f\u00E9l\u00E9v\\Szoftverfejleszt\u00E9s\\F\u00E9l\u00E9ves\\BI496E_HSZF_2024251.Model\\Flights.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -78,7 +90,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,19 +98,43 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
+              "Title": "dbo.Discount [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/FlightsDB/True/SqlTable/dbo.Discount.sql",
+              "ToolTip": "dbo.Discount [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-11-20T18:53:27.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Discount.cs",
+              "DocumentMoniker": "D:\\Egyetem\\3. f\u00E9l\u00E9v\\Szoftverfejleszt\u00E9s\\HSZF\\BI496E_HSZF_2024251.Model\\Discount.cs",
+              "RelativeDocumentMoniker": "..\\BI496E_HSZF_2024251.Model\\Discount.cs",
+              "ToolTip": "D:\\Egyetem\\3. f\u00E9l\u00E9v\\Szoftverfejleszt\u00E9s\\HSZF\\BI496E_HSZF_2024251.Model\\Discount.cs",
+              "RelativeToolTip": "..\\BI496E_HSZF_2024251.Model\\Discount.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T13:49:52.113Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "FlightDbContext.cs",
               "DocumentMoniker": "D:\\Egyetem\\3. f\u00E9l\u00E9v\\Szoftverfejleszt\u00E9s\\HSZF\\BI496E_HSZF_2024251.Persistence.MsSql\\FlightDbContext.cs",
               "RelativeDocumentMoniker": "..\\BI496E_HSZF_2024251.Persistence.MsSql\\FlightDbContext.cs",
               "ToolTip": "D:\\Egyetem\\3. f\u00E9l\u00E9v\\Szoftverfejleszt\u00E9s\\HSZF\\BI496E_HSZF_2024251.Persistence.MsSql\\FlightDbContext.cs",
               "RelativeToolTip": "..\\BI496E_HSZF_2024251.Persistence.MsSql\\FlightDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAwwA4AAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T15:12:11.234Z"
+              "WhenOpened": "2024-11-18T15:12:11.234Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "FlightDbContext.cs",
               "DocumentMoniker": "D:\\Egyetem\\3. f\u00E9l\u00E9v\\Szoftverfejleszt\u00E9s\\F\u00E9l\u00E9ves\\BI496E_HSZF_2024251.Persistence.MsSql\\FlightDbContext.cs",
               "RelativeDocumentMoniker": "..\\..\\F\u00E9l\u00E9ves\\BI496E_HSZF_2024251.Persistence.MsSql\\FlightDbContext.cs",
@@ -110,7 +146,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "Discount.cs",
               "DocumentMoniker": "D:\\Egyetem\\3. f\u00E9l\u00E9v\\Szoftverfejleszt\u00E9s\\F\u00E9l\u00E9ves\\BI496E_HSZF_2024251.Model\\Discount.cs",
               "RelativeDocumentMoniker": "..\\..\\F\u00E9l\u00E9ves\\BI496E_HSZF_2024251.Model\\Discount.cs",
@@ -122,7 +158,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "Destination.cs",
               "DocumentMoniker": "D:\\Egyetem\\3. f\u00E9l\u00E9v\\Szoftverfejleszt\u00E9s\\F\u00E9l\u00E9ves\\BI496E_HSZF_2024251.Model\\Destination.cs",
               "RelativeDocumentMoniker": "..\\..\\F\u00E9l\u00E9ves\\BI496E_HSZF_2024251.Model\\Destination.cs",
@@ -134,7 +170,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Airline.cs",
               "DocumentMoniker": "D:\\Egyetem\\3. f\u00E9l\u00E9v\\Szoftverfejleszt\u00E9s\\F\u00E9l\u00E9ves\\BI496E_HSZF_2024251.Model\\Airline.cs",
               "RelativeDocumentMoniker": "..\\..\\F\u00E9l\u00E9ves\\BI496E_HSZF_2024251.Model\\Airline.cs",
@@ -146,33 +182,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Egyetem\\3. f\u00E9l\u00E9v\\Szoftverfejleszt\u00E9s\\HSZF\\BI496E_HSZF_2024251.Console\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\Egyetem\\3. f\u00E9l\u00E9v\\Szoftverfejleszt\u00E9s\\HSZF\\BI496E_HSZF_2024251.Console\\Program.cs*",
-              "RelativeToolTip": "Program.cs*",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAowEsAAAAPAAAAAAAAAA==",
+              "ToolTip": "D:\\Egyetem\\3. f\u00E9l\u00E9v\\Szoftverfejleszt\u00E9s\\HSZF\\BI496E_HSZF_2024251.Console\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAE0BAAAAAAAAAAAqwKgBAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T15:07:15.071Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T15:07:15.071Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "AirlineDataProvider.cs",
               "DocumentMoniker": "D:\\Egyetem\\3. f\u00E9l\u00E9v\\Szoftverfejleszt\u00E9s\\HSZF\\BI496E_HSZF_2024251.Persistence.MsSql\\AirlineDataProvider.cs",
               "RelativeDocumentMoniker": "..\\BI496E_HSZF_2024251.Persistence.MsSql\\AirlineDataProvider.cs",
-              "ToolTip": "D:\\Egyetem\\3. f\u00E9l\u00E9v\\Szoftverfejleszt\u00E9s\\HSZF\\BI496E_HSZF_2024251.Persistence.MsSql\\AirlineDataProvider.cs",
-              "RelativeToolTip": "..\\BI496E_HSZF_2024251.Persistence.MsSql\\AirlineDataProvider.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAABCwBcAAABGAAAAAAAAAA==",
+              "ToolTip": "D:\\Egyetem\\3. f\u00E9l\u00E9v\\Szoftverfejleszt\u00E9s\\HSZF\\BI496E_HSZF_2024251.Persistence.MsSql\\AirlineDataProvider.cs*",
+              "RelativeToolTip": "..\\BI496E_HSZF_2024251.Persistence.MsSql\\AirlineDataProvider.cs*",
+              "ViewState": "AgIAAKoAAAAAAAAAAAA4wLsAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-18T11:58:49.298Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
+              "Title": "dbo.Airlines.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/FlightsDB/True/SqlTable/dbo.Airlines.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/FlightsDB/True/SqlTable/dbo.Airlines.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-11-20T13:30:13.469Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "airlines.json",
               "DocumentMoniker": "D:\\Egyetem\\3. f\u00E9l\u00E9v\\Szoftverfejleszt\u00E9s\\HSZF\\BI496E_HSZF_2024251.Console\\bin\\Debug\\net8.0\\airlines.json",
               "RelativeDocumentMoniker": "bin\\Debug\\net8.0\\airlines.json",
@@ -180,12 +224,32 @@
               "RelativeToolTip": "bin\\Debug\\net8.0\\airlines.json",
               "ViewState": "AgIAAFQAAAAAAAAAAAAAAAoAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-06T19:35:18.252Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T19:35:18.252Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
+              "Title": "AirlineService.cs",
+              "DocumentMoniker": "D:\\Egyetem\\3. f\u00E9l\u00E9v\\Szoftverfejleszt\u00E9s\\HSZF\\BI496E_HSZF_2024251.Application\\AirlineService.cs",
+              "RelativeDocumentMoniker": "..\\BI496E_HSZF_2024251.Application\\AirlineService.cs",
+              "ToolTip": "D:\\Egyetem\\3. f\u00E9l\u00E9v\\Szoftverfejleszt\u00E9s\\HSZF\\BI496E_HSZF_2024251.Application\\AirlineService.cs",
+              "RelativeToolTip": "..\\BI496E_HSZF_2024251.Application\\AirlineService.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAQwFwAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T11:58:26.631Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "dbo.Destinations.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/FlightsDB/True/SqlTable/dbo.Destinations.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/FlightsDB/True/SqlTable/dbo.Destinations.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-11-20T13:30:56.738Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "Destination.cs",
               "DocumentMoniker": "D:\\Egyetem\\3. f\u00E9l\u00E9v\\Szoftverfejleszt\u00E9s\\HSZF\\BI496E_HSZF_2024251.Model\\Destination.cs",
               "RelativeDocumentMoniker": "..\\BI496E_HSZF_2024251.Model\\Destination.cs",
@@ -197,7 +261,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "Flights.cs",
               "DocumentMoniker": "D:\\Egyetem\\3. f\u00E9l\u00E9v\\Szoftverfejleszt\u00E9s\\F\u00E9l\u00E9ves\\BI496E_HSZF_2024251.Model\\Flights.cs",
               "RelativeDocumentMoniker": "..\\..\\F\u00E9l\u00E9ves\\BI496E_HSZF_2024251.Model\\Flights.cs",
@@ -209,20 +273,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AirlineService.cs",
-              "DocumentMoniker": "D:\\Egyetem\\3. f\u00E9l\u00E9v\\Szoftverfejleszt\u00E9s\\HSZF\\BI496E_HSZF_2024251.Application\\AirlineService.cs",
-              "RelativeDocumentMoniker": "..\\BI496E_HSZF_2024251.Application\\AirlineService.cs",
-              "ToolTip": "D:\\Egyetem\\3. f\u00E9l\u00E9v\\Szoftverfejleszt\u00E9s\\HSZF\\BI496E_HSZF_2024251.Application\\AirlineService.cs",
-              "RelativeToolTip": "..\\BI496E_HSZF_2024251.Application\\AirlineService.cs",
-              "ViewState": "AgIAAFAAAAAAAAAAAAA9wFwAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T11:58:26.631Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "AirlineDataProvider.cs",
               "DocumentMoniker": "D:\\Egyetem\\3. f\u00E9l\u00E9v\\Szoftverfejleszt\u00E9s\\F\u00E9l\u00E9ves\\BI496E_HSZF_2024251.Persistence.MsSql\\AirlineDataProvider.cs",
               "RelativeDocumentMoniker": "..\\..\\F\u00E9l\u00E9ves\\BI496E_HSZF_2024251.Persistence.MsSql\\AirlineDataProvider.cs",
@@ -234,7 +285,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "Airline.cs",
               "DocumentMoniker": "D:\\Egyetem\\3. f\u00E9l\u00E9v\\Szoftverfejleszt\u00E9s\\HSZF\\BI496E_HSZF_2024251.Model\\Airline.cs",
               "RelativeDocumentMoniker": "..\\BI496E_HSZF_2024251.Model\\Airline.cs",
@@ -246,7 +297,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "ItemsCollection.cs",
               "DocumentMoniker": "C:\\Users\\Bence\\AppData\\Local\\SourceServer\\6f51b034b491be8f14b5a26acdc85165979aa22df23107cb43f912ab13ee7f7e\\ConsoleMenu\\ItemsCollection.cs",
               "ToolTip": "C:\\Users\\Bence\\AppData\\Local\\SourceServer\\6f51b034b491be8f14b5a26acdc85165979aa22df23107cb43f912ab13ee7f7e\\ConsoleMenu\\ItemsCollection.cs",
@@ -256,7 +307,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "airlines2.json",
               "DocumentMoniker": "D:\\Egyetem\\3. f\u00E9l\u00E9v\\Szoftverfejleszt\u00E9s\\HSZF\\BI496E_HSZF_2024251.Console\\bin\\Debug\\net8.0\\airlines2.json",
               "RelativeDocumentMoniker": "bin\\Debug\\net8.0\\airlines2.json",
@@ -268,7 +319,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "ConsoleMenu.cs",
               "DocumentMoniker": "C:\\Users\\Bence\\AppData\\Local\\SourceServer\\e81bf2098c8c9097b7a0ed18948ab7fc8ac24f24a514d6bc50d801348d49aefe\\ConsoleMenu\\ConsoleMenu.cs",
               "ToolTip": "C:\\Users\\Bence\\AppData\\Local\\SourceServer\\e81bf2098c8c9097b7a0ed18948ab7fc8ac24f24a514d6bc50d801348d49aefe\\ConsoleMenu\\ConsoleMenu.cs",
@@ -278,7 +329,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 23,
               "Title": "AirlineService.cs",
               "DocumentMoniker": "D:\\Egyetem\\3. f\u00E9l\u00E9v\\Szoftverfejleszt\u00E9s\\F\u00E9l\u00E9ves\\BI496E_HSZF_2024251.Application\\AirlineService.cs",
               "RelativeDocumentMoniker": "..\\..\\F\u00E9l\u00E9ves\\BI496E_HSZF_2024251.Application\\AirlineService.cs",
@@ -290,7 +341,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "UserCommunicator.cs",
               "DocumentMoniker": "D:\\Egyetem\\3. f\u00E9l\u00E9v\\Szoftverfejleszt\u00E9s\\HSZF\\BI496E_HSZF_2024251.Console\\UserCommunicator.cs",
               "RelativeDocumentMoniker": "UserCommunicator.cs",
@@ -302,7 +353,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "SystemConsole.cs",
               "DocumentMoniker": "C:\\Users\\Bence\\AppData\\Local\\SourceServer\\41bae01f9f3a3485d911829c078824cfe1aad17cecf9be2af119c38da17dfc4a\\ConsoleMenu\\SystemConsole.cs",
               "ToolTip": "C:\\Users\\Bence\\AppData\\Local\\SourceServer\\41bae01f9f3a3485d911829c078824cfe1aad17cecf9be2af119c38da17dfc4a\\ConsoleMenu\\SystemConsole.cs",
@@ -312,7 +363,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "BI496E_HSZF_2024251.Console.csproj",
               "DocumentMoniker": "D:\\Egyetem\\3. f\u00E9l\u00E9v\\Szoftverfejleszt\u00E9s\\HSZF\\BI496E_HSZF_2024251.Console\\BI496E_HSZF_2024251.Console.csproj",
               "RelativeDocumentMoniker": "BI496E_HSZF_2024251.Console.csproj",
@@ -324,7 +375,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 24,
               "Title": "Class1.cs",
               "DocumentMoniker": "D:\\Egyetem\\3. f\u00E9l\u00E9v\\Szoftverfejleszt\u00E9s\\F\u00E9l\u00E9ves\\BI496E_HSZF_2024251.Test\\Class1.cs",
               "RelativeDocumentMoniker": "..\\..\\F\u00E9l\u00E9ves\\BI496E_HSZF_2024251.Test\\Class1.cs",

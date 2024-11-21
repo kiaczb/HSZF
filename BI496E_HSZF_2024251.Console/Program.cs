@@ -34,35 +34,35 @@ var airlineService = host.Services.GetRequiredService<IAirlineService>();
 var menu = new ConsoleMenu(args, 1)
     .Add("Read airlines from json", () => ReadFlights())
     .Add("Add airline", () => AddAirline())
-    .Add("Modify airlines", ()=>ShowAirlinesasd())
+    .Add("Modify airlines", ()=>ShowAirlines())
     .Add("Exit", () => Environment.Exit(0))
     .Configure((config) =>
     {
-        config.Title = "First";
-        config.EnableBreadcrumb = true;
-        config.WriteBreadcrumbAction = titles => Console.WriteLine("Breadcrumb: " + string.Join(" > ", titles));
+        config.Title = "Main Page";
+       
     });
 
 menu.Show();
+
+//public event EventHandler CheapestDestinationAdded;
 
 void ModifyMenu(string airlineName)
 {
     var modifyAirlineMenu = new ConsoleMenu(args, 3)
     .Add("Modify", () => ModifyAirline(airlineName))
     .Add("Add Destination", () => AddDestination(airlineName))
+    .Add("Add Discount", () => AddDiscount(airlineName))
     .Add("Remove Airline", () => RemoveAirline(airlineName))
     .Add("Remove Destination or Discount", () => RemoveDestinationOrDiscount(airlineName))
     .Add("Back", ConsoleMenu.Close)
     .Configure((config) =>
     {
-        config.Title = "Third";
-        config.EnableBreadcrumb = true;
-        config.WriteBreadcrumbAction = titles => Console.WriteLine("Breadcrumb: " + string.Join(" > ", titles));
+        config.Title = airlineName;
     });
 
     modifyAirlineMenu.Show();
 }
-void ShowAirlinesasd()
+void ShowAirlines()
 {
     var airlines = new ConsoleMenu(args, 2);
     foreach (var item in airlineService.GetAllDistinctAirlineNames())
@@ -72,16 +72,14 @@ void ShowAirlinesasd()
             {
                 ModifyMenu(item);
                 airlines.CloseMenu();
-                ShowAirlinesasd();
+                ShowAirlines();
             });
             
     }
     airlines.Add("Back", ConsoleMenu.Close);
     airlines.Configure((config) =>
     {
-        config.Title = "Second";
-        config.EnableBreadcrumb = true;
-        config.WriteBreadcrumbAction = titles => Console.WriteLine("Breadcrumb: " + string.Join(" > ", titles));
+        config.Title = "List of airlines";
     });
     airlines.Show();
 }
@@ -89,12 +87,11 @@ void EmptyAction() { }
 void ModifyAirline(string airlineName)
 {
     var airline = airlineService.GetAirlineByName(airlineName);
-
-    var asd = new ConsoleMenu(args, 3);
+    var airlineDetailsMenu = new ConsoleMenu(args, 3);
     foreach (var item in airline)
     {
-        asd.Add($"{item.name} - {item.departure_from}", EmptyAction);
-        asd.Configure(config =>
+        airlineDetailsMenu.Add($"{item.name} - {item.departure_from}", EmptyAction);
+        airlineDetailsMenu.Configure(config =>
         {
             config.WriteItemAction = menuItem =>
             {
@@ -120,7 +117,7 @@ void ModifyAirline(string airlineName)
                     {
                         propValue = "";
                     }
-                    asd.Add($"{start}-{displayName.DisplayName}: {propValue}", (a) =>
+                    airlineDetailsMenu.Add($"{start}-{displayName.DisplayName}: {propValue}", (a) =>
                     {
                         if (TryParseValue(prop.PropertyType,Console.ReadLine(), out var result) && prop.Name != "discount")
                         {
@@ -137,7 +134,7 @@ void ModifyAirline(string airlineName)
                             var displayDiscountName = (DisplayNameAttribute)Attribute.GetCustomAttribute(disProp, typeof(DisplayNameAttribute));
                             if (Attribute.IsDefined(disProp, typeof(DisplayPropertyAttribute)) && displayDiscountName != null)
                             {
-                                asd.Add($"{start}-{displayDiscountName.DisplayName}: {disProp.GetValue(dest.discount)}", (a) =>
+                                airlineDetailsMenu.Add($"{start}-{displayDiscountName.DisplayName}: {disProp.GetValue(dest.discount)}", (a) =>
                                 {
                                     if (TryParseValue(disProp.PropertyType, Console.ReadLine(), out var result))
                                     {
@@ -157,8 +154,8 @@ void ModifyAirline(string airlineName)
 
         }
     }
-    asd.Add("Exit", ConsoleMenu.Close);
-    asd.Show();
+    airlineDetailsMenu.Add("Exit", ConsoleMenu.Close);
+    airlineDetailsMenu.Show();
 }
 static bool TryParseValue(Type targetType, string input, out object result)
 {
@@ -192,7 +189,7 @@ void RemoveAirline(string airlineName)
 {
     var airline = airlineService.GetAirlineByName(airlineName);
 
-    var asd = new ConsoleMenu(args, 3);
+    var airlineDetailsMenu = new ConsoleMenu(args, 3);
     foreach (var item in airline)
     {
         string destinations = "";
@@ -233,13 +230,13 @@ void RemoveAirline(string airlineName)
             }
 
         }
-        asd.Add($"{item.name} - {item.departure_from}\n"+destinations,() =>
+        airlineDetailsMenu.Add($"{item.name} - {item.departure_from}\n"+destinations,() =>
         {
             airlineService.RemoveAirline(item);
-            asd.CloseMenu();
+            airlineDetailsMenu.CloseMenu();
             RemoveAirline(item.name);
         });
-        asd.Configure(config =>
+        airlineDetailsMenu.Configure(config =>
         {
             config.WriteItemAction = menuItem =>
             {
@@ -250,18 +247,18 @@ void RemoveAirline(string airlineName)
         });
         
     }
-    asd.Add("Exit", ConsoleMenu.Close);
-    asd.Show();
+    airlineDetailsMenu.Add("Exit", ConsoleMenu.Close);
+    airlineDetailsMenu.Show();
 }
 void RemoveDestinationOrDiscount(string airlineName)
 {
     var airline = airlineService.GetAirlineByName(airlineName);
 
-    var asd = new ConsoleMenu(args, 3);
+    var airlineDetailsMenu = new ConsoleMenu(args, 3);
     foreach (var item in airline)
     {
-        asd.Add($"{item.name} - {item.departure_from}", EmptyAction);
-        asd.Configure(config =>
+        airlineDetailsMenu.Add($"{item.name} - {item.departure_from}", EmptyAction);
+        airlineDetailsMenu.Configure(config =>
         {
             config.WriteItemAction = menuItem =>
             {
@@ -309,18 +306,18 @@ void RemoveDestinationOrDiscount(string airlineName)
                 }
 
             }
-            asd.Add(destinations, () =>
+            airlineDetailsMenu.Add(destinations, () =>
             {
                 airlineService.RemoveDestination(item, dest);
-                asd.CloseMenu();
+                airlineDetailsMenu.CloseMenu();
                 RemoveDestinationOrDiscount(item.name);
             });
             if (discount != "")
             {
-                asd.Add(discount, ()=>
+                airlineDetailsMenu.Add(discount, ()=>
                 {
                     airlineService.RemoveDiscount(item, dest);
-                    asd.CloseMenu();
+                    airlineDetailsMenu.CloseMenu();
                     RemoveDestinationOrDiscount(item.name);
                 });
 
@@ -328,8 +325,8 @@ void RemoveDestinationOrDiscount(string airlineName)
 
         }
     }
-    asd.Add("Exit", ConsoleMenu.Close);
-    asd.Show();
+    airlineDetailsMenu.Add("Exit", ConsoleMenu.Close);
+    airlineDetailsMenu.Show();
 }
 void AddAirline()
 {
@@ -367,7 +364,7 @@ void AddDestination(string airlineName)
 {
     var airline = airlineService.GetAirlineByName(airlineName);
 
-    var asd = new ConsoleMenu(args, 3);
+    var airlineDetailsMenu = new ConsoleMenu(args, 3);
     foreach (var item in airline)
     {
         string destinations = "";
@@ -408,14 +405,14 @@ void AddDestination(string airlineName)
             }
 
         }
-        asd.Add($"{item.name} - {item.departure_from}\n" + destinations, () =>
+        airlineDetailsMenu.Add($"{item.name} - {item.departure_from}\n" + destinations, () =>
         {
             var myAirline = item;
             AddDestinationForm(ref myAirline);
-            asd.CloseMenu();
+            airlineDetailsMenu.CloseMenu();
             AddDestination(item.name);
         });
-        asd.Configure(config =>
+        airlineDetailsMenu.Configure(config =>
         {
             config.WriteItemAction = menuItem =>
             {
@@ -426,8 +423,78 @@ void AddDestination(string airlineName)
         });
 
     }
-    asd.Add("Exit", ConsoleMenu.Close);
-    asd.Show();
+    airlineDetailsMenu.Add("Exit", ConsoleMenu.Close);
+    airlineDetailsMenu.Show();
+}
+void AddDiscount(string airlineName)
+{
+    var airline = airlineService.GetAirlineByName(airlineName);
+
+    var airlineDetailsMenu = new ConsoleMenu(args, 3);
+    airlineDetailsMenu.Configure(config =>
+    {
+        config.WriteItemAction = menuItem =>
+        {
+            Console.Write($"{menuItem.Name}");
+
+        };
+        config.Selector = "";
+    });
+    foreach (var item in airline)
+    {
+        airlineDetailsMenu.Add($"{item.name} - {item.departure_from}", EmptyAction);
+        foreach (var dest in item.Destinations)
+        {
+            string destinations = "";
+            string discount = "";
+            foreach (PropertyInfo prop in dest.GetType().GetProperties())
+            {
+                string start = "\t  ";
+                var displayName = (DisplayNameAttribute)Attribute.GetCustomAttribute(prop, typeof(DisplayNameAttribute));
+                if (Attribute.IsDefined(prop, typeof(DisplayPropertyAttribute)) && prop.GetValue(dest) != null && displayName.DisplayName != null)
+                {
+                    string propValue = prop.GetValue(dest).ToString();
+                    if (prop.Name == "city")
+                    {
+                        start = "\t";
+                    }
+                    if (prop.Name == "discount")
+                    {
+                        propValue = "";
+                    }
+                    destinations += $"{start}-{displayName.DisplayName}: {propValue}\n";
+                    if (prop.Name == "discount" && dest.discount != null)
+                    {
+                        start = "\t\t";
+                        foreach (PropertyInfo disProp in dest.discount.GetType().GetProperties())
+                        {
+                            var displayDiscountName = (DisplayNameAttribute)Attribute.GetCustomAttribute(disProp, typeof(DisplayNameAttribute));
+                            if (Attribute.IsDefined(disProp, typeof(DisplayPropertyAttribute)) && displayDiscountName != null)
+                            {
+                                destinations += $"{start}-{displayDiscountName.DisplayName}: {disProp.GetValue(dest.discount)}\n";
+                            }
+
+                        }
+                    }
+
+                }
+            }
+            airlineDetailsMenu.Add($"{destinations}", () =>
+            {
+                if (discount == "" || discount == null)
+                {
+                    var myDestination = dest;
+                    AddDiscountForm(ref myDestination);
+                    airlineDetailsMenu.CloseMenu();
+                    AddDiscount(item.name);
+
+                }
+            });
+
+        }
+    }
+    airlineDetailsMenu.Add("Exit", ConsoleMenu.Close);
+    airlineDetailsMenu.Show();
 }
 void AddDestinationForm(ref Airline airline)
 {
@@ -479,12 +546,65 @@ void AddDestinationForm(ref Airline airline)
             }
         }
         airline.Destinations.Add(destination);
+        if (IsCheapestDestination(airline,destination))
+        {
+
+        }
         do
         {
             Console.WriteLine("\nWould you like to add more destinations? [y/n]");
             keyInfo = Console.ReadKey();
         } while (keyInfo.Key != ConsoleKey.N && keyInfo.Key != ConsoleKey.Y);
     } while (keyInfo.Key == ConsoleKey.Y);
+}
+void AddDiscountForm(ref Destination destination)
+{
+    foreach (var dest in destination.GetType().GetProperties())
+    {
+        var displayDestName = (DisplayNameAttribute)Attribute.GetCustomAttribute(dest, typeof(DisplayNameAttribute));
+        if (displayDestName != null && displayDestName.DisplayName == "Discount")
+        {
+            Discount discount = new Discount();
+            Console.WriteLine();
+            foreach (var disc in discount.GetType().GetProperties())
+            {
+                var displayDiscName = (DisplayNameAttribute)Attribute.GetCustomAttribute(disc, typeof(DisplayNameAttribute));
+                if (displayDiscName != null)
+                {
+                    Console.Write($"{displayDiscName.DisplayName}: ");
+                    if (Attribute.IsDefined(disc, typeof(DisplayPropertyAttribute)) && TryParseValue(disc.PropertyType, Console.ReadLine(), out var discResult))
+                    {
+
+                        disc?.SetValue(discount, discResult);
+                    }
+                }
+            }
+            destination.discount = discount;
+        }
+    }
+}
+bool IsCheapestDestination(Airline airline, Destination destination)
+{
+    double minPrice = destination.discount != null && IsValidDiscount(destination.discount) ? destination.price * (1 - (destination.discount.value / 100)) : destination.price;
+    Destination minDestination = destination;
+    foreach (var item in airline.Destinations)
+    {
+        if (item.discount != null && IsValidDiscount(item.discount) && item.price * (1-(item.discount.value/100)) < minPrice)
+        {
+            minPrice = item.price * (1 - (item.discount.value / 100));
+            minDestination = item;
+        }
+        if (item.price < minPrice)
+        {
+            minPrice = item.price;
+            minDestination = item;
+        }
+    }
+    return minDestination.Equals(destination);
+}
+bool IsValidDiscount(Discount discount)
+{
+    return discount.valid_from <= DateTime.Now && discount.valid_to >= DateTime.Now;
 }
 void ReadFlights()
 {

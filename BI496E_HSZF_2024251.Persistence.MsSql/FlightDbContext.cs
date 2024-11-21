@@ -12,6 +12,7 @@ namespace BI496E_HSZF_2024251.Persistence.MsSql
     {
         public DbSet<Airline> Airlines { get; set; }
         public DbSet<Destination> Destinations { get; set; }
+        public DbSet<Discount> Discounts { get; set; }
 
         public FlightDbContext()
         {

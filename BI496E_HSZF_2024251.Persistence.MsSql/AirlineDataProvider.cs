@@ -20,6 +20,7 @@ namespace BI496E_HSZF_2024251.Persistence.MsSql
         void RemoveAirline(Airline airline);
         void AddAirline(Airline airline);
         void AddDestination(Destination destination);
+        //void AddDiscount(Destination destination);
         void RemoveDestination(Airline airline, Destination destination);
         void RemoveDiscount(Airline airline, Destination destination);
         void AddRangeDestination(Airline airline, ICollection<Destination> destinations);
@@ -69,69 +70,69 @@ namespace BI496E_HSZF_2024251.Persistence.MsSql
         }
         public bool ReadFlightsFromJson(string path)
         {
-            string json = File.ReadAllText(path);
-            var data = JsonConvert.DeserializeObject<Flights>(json);
-            foreach (var airlineData in data.Airlines)
-            {
-                if (hasSameAirline(airlineData))
-                {
-                    foreach (var destinationData in airlineData.Destinations)
-                    {
-                       
-                        var destination = new Destination()
-                        {
-                            city = destinationData.city,
-                            price = destinationData.price,
-                            distance = destinationData.distance,
-                            departure_date = DateTime.Parse(destinationData.departure_date.ToString()),
-                            discount = destinationData.discount
-                        };
-                        var myAirline = GetFirstPredAirline(x => hasSameAirline(x));
-
-                        if (hasDest(destination))
-                        {
-                            continue;
-                        }
-                        destination.Airline = myAirline;
-                        myAirline.Destinations.Add(destination);
-                        FlightDbContext.Destinations.Add(destination);
-                        FlightDbContext.SaveChanges();
-
-                    }
-
-                }
-                else
-                {
-                    
-                    var airline = new Airline()
-                    {
-                        name = airlineData.name,
-                        departure_from = airlineData.departure_from,
-                        Destinations = new List<Destination>()
-                    };
-                    foreach (var destinationData in airlineData.Destinations)
-                    {
-
-                        var destination = new Destination()
-                        {
-                            city = destinationData.city,
-                            price = destinationData.price,
-                            distance = destinationData.distance,
-                            departure_date = DateTime.Parse(destinationData.departure_date.ToString()),
-                            discount = destinationData.discount
-                        };
-                        airline.Destinations.Add(destination);
-                    }
-                    FlightDbContext.Airlines.Add(airline);
-                }
-                
-                FlightDbContext.SaveChanges();
-            }
+            
 
             FlightDbContext.SaveChanges();
             try
             {
-                
+                string json = File.ReadAllText(path);
+                var data = JsonConvert.DeserializeObject<Flights>(json);
+                foreach (var airlineData in data.Airlines)
+                {
+                    if (hasSameAirline(airlineData))
+                    {
+                        foreach (var destinationData in airlineData.Destinations)
+                        {
+
+                            var destination = new Destination()
+                            {
+                                city = destinationData.city,
+                                price = destinationData.price,
+                                distance = destinationData.distance,
+                                departure_date = DateTime.Parse(destinationData.departure_date.ToString()),
+                                discount = destinationData.discount
+                            };
+                            var myAirline = GetFirstPredAirline(x => hasSameAirline(x));
+
+                            if (hasDest(destination))
+                            {
+                                continue;
+                            }
+                            destination.Airline = myAirline;
+                            myAirline.Destinations.Add(destination);
+                            FlightDbContext.Destinations.Add(destination);
+                            FlightDbContext.SaveChanges();
+
+                        }
+
+                    }
+                    else
+                    {
+
+                        var airline = new Airline()
+                        {
+                            name = airlineData.name,
+                            departure_from = airlineData.departure_from,
+                            Destinations = new List<Destination>()
+                        };
+                        foreach (var destinationData in airlineData.Destinations)
+                        {
+
+                            var destination = new Destination()
+                            {
+                                city = destinationData.city,
+                                price = destinationData.price,
+                                distance = destinationData.distance,
+                                departure_date = DateTime.Parse(destinationData.departure_date.ToString()),
+                                discount = destinationData.discount
+                            };
+                            airline.Destinations.Add(destination);
+                        }
+                        FlightDbContext.Airlines.Add(airline);
+                    }
+
+                    FlightDbContext.SaveChanges();
+                }
                 return true;
             }
             catch 
@@ -171,6 +172,7 @@ namespace BI496E_HSZF_2024251.Persistence.MsSql
         public void RemoveDestination(Airline airline, Destination destination)
         {
             var dbAirlines = GetFirstPredAirline(x => x.name == airline.name && x.departure_from == airline.departure_from);
+            RemoveDiscount(dbAirlines, destination);
             dbAirlines.Destinations.Remove(destination);
             FlightDbContext.SaveChanges();
         }
@@ -182,9 +184,14 @@ namespace BI496E_HSZF_2024251.Persistence.MsSql
             {
                 if (item.Equals(destination))
                 {
+                    FlightDbContext.Discounts.Remove(item.discount);
                     item.discount = null;
+                    FlightDbContext.SaveChanges();
+
                 }
             }
+            FlightDbContext.SaveChanges();
+
         }
     }
 }
